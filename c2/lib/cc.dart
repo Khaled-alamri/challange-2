@@ -16,27 +16,30 @@ class _MyWidgetState extends State<MyWidget> {
 
   @override
   Widget build(BuildContext context) {
-    return  Row(
-                                              mainAxisAlignment: MainAxisAlignment.spaceAround,
-                                              children:[
-                                                Text(widget.name.toString()),
-                                                 Container(
-                                                   child: Row(
-                                                     children: [
-                                                       CupertinoSwitch(
-                                                value: check1!,
-                                                thumbColor: CupertinoColors.systemBlue,
-                                                onChanged: (bool? value) {
-                                                        // This is called when the user toggles the switch.
-                                                        setState(() {
-                                                           check1 = value;
-                                                        });
-                                                },
-                                              ),
-                                                     ],
+    return  Padding(
+      padding: const EdgeInsets.all(10),
+      child: Row(
+                                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                                children:[
+                                                  Text(widget.name.toString()),
+                                                   Container(
+                                                     child: Row(
+                                                       children: [
+                                                         CupertinoSwitch(
+                                                  value: check1!,
+                                                  thumbColor: CupertinoColors.systemBlue,
+                                                  onChanged: (bool? value) {
+                                                          // This is called when the user toggles the switch.
+                                                          setState(() {
+                                                             check1 = value;
+                                                          });
+                                                  },
+                                                ),
+                                                       ],
+                                                     ),
                                                    ),
-                                                 ),
-                                              ]
-                                            );
+                                                ]
+                                              ),
+    );
   }
 }
