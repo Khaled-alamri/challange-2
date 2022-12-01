@@ -83,25 +83,34 @@ class _Scren1State extends State<Scren1> {
                           showDialog(
                             context: context,
                             builder: (BuildContext context) {
-                              return Center(
-                                child: Column(
-                                  children: [
-                                    Container(
-                                      height: MediaQuery.of(context).size.height/3,
-                                      child: AlertDialog(
-                                        icon: Icon(
-                                          Icons.check_box,
-                                          color: Colors.green,
-                                          size: 110.0,
+                              return Column(
+                                children: [
+                                  Padding(
+                                    padding: const EdgeInsets.only(top: 150),
+                                    child: Center(
+                                      child: Container(
+                                        height: MediaQuery.of(context).size.height/2,
+                                        child: AlertDialog(
+                                          icon: Padding(
+                                            padding: const EdgeInsets.only(top: 70),
+                                            child: Icon(
+                                              Icons.check_box,
+                                              color: Colors.green,
+                                              size: 110.0,
+                                            ),
+                                          ),
+                                          content: Padding(
+                                            padding: const EdgeInsets.only(bottom: 70),
+                                            child: Center(child: Text('Success')),
+                                          ),
+                                          shape: RoundedRectangleBorder(
+                                              borderRadius: BorderRadius.all(
+                                                  Radius.circular(2.0))),
                                         ),
-                                        content: Center(child: Text('Success')),
-                                        shape: RoundedRectangleBorder(
-                                            borderRadius: BorderRadius.all(
-                                                Radius.circular(2.0))),
                                       ),
                                     ),
-                                  ],
-                                ),
+                                  ),
+                                ],
                               );
                             },
                           );
