@@ -63,6 +63,14 @@ class _Scren1State extends State<Scren1> {
                         style: TextStyle(fontSize: 20),
                       ),
                     ),
+                    Padding(
+                      padding: const EdgeInsets.only(right: 100,),
+                      child: Center(child: Text("UX Design")),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.only(right: 100,),
+                      child: Center(child: Text("28 Students",style:TextStyle(color: Color.fromARGB(255, 191, 190, 188)) ,)),
+                    ),
                   ]),
                 ),
               ),
