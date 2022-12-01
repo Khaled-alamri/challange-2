@@ -87,11 +87,12 @@ class _Scren1State extends State<Scren1> {
                                 child: Column(
                                   children: [
                                     Container(
+                                      height: MediaQuery.of(context).size.height/3,
                                       child: AlertDialog(
                                         icon: Icon(
                                           Icons.check_box,
                                           color: Colors.green,
-                                          size: 30.0,
+                                          size: 110.0,
                                         ),
                                         content: Center(child: Text('Success')),
                                         shape: RoundedRectangleBorder(
